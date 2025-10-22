@@ -7,7 +7,7 @@ function createAudioHTML(path) {
   
   function generateExampleRow(table_row, base_path, paddedNumber, folders, col_offset) {
     for (var i = 0; i < folders.length; i++) {
-        if (folders[i] == 'devices') {
+        if (folders[i] == 'genres') {
             let p = base_path + folders[i] + '/' + paddedNumber + '.txt';
             let cell = table_row.cells[col_offset + i];
             var req = new XMLHttpRequest();
@@ -25,7 +25,7 @@ function createAudioHTML(path) {
   
   function generateT2A(tableId, e) {
     let table = document.getElementById(tableId);
-    let folders = ['devices', 'input', 'target', 'output'];
+    let folders = ['genres', 'lowend', 'cheap2chic', 'highend'];
     // Important: # of rows 
     for (var i = 0; i < 5 + 1; i++) {
       let paddedNumber = i.toString().padStart(5, '0');  
@@ -37,7 +37,7 @@ function createAudioHTML(path) {
     generateT2A('supervision-efficiency-table', 1);
   });
 
-  for (let e = 1; e <= 2; e++) {
+  for (let e = 1; e <= 3; e++) {
     let id = '#supervision-efficiency-table-' + e;
     $(id).click(function() {
       generateT2A('supervision-efficiency-table', e);
