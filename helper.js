@@ -35,14 +35,16 @@ function createAudioHTML(path) {
 
   $(document).ready(function() {
     generateT2A('supervision-efficiency-table', 1);
+    generateT2A('supervision-efficiency-table', 2);
+
   });
 
-  for (let e = 1; e <= 5; e++) {
-    let id = '#supervision-efficiency-table-' + e;
-    $(id).click(function() {
-      generateT2A('supervision-efficiency-table', e);
-      $(id).parent().siblings().removeClass('active');
-      $(id).parent().addClass('active');
-      return false;
-    });
-  }
+  // for (let e = 1; e <= 5; e++) {
+  //   let id = '#supervision-efficiency-table-' + e;
+  //   $(id).click(function() {
+  //     generateT2A('supervision-efficiency-table', e);
+  //     $(id).parent().siblings().removeClass('active');
+  //     $(id).parent().addClass('active');
+  //     return false;
+  //   });
+  // }
