@@ -33,19 +33,31 @@
         </p>
       </div>
 
-      <p class="mt-4">
-        <b>Abstract.</b>
-        Low-end earphones are widely spread due to their affordability, but their limited speaker hardware often leads to poor music playback quality.
-        This raises a key question: Can we compensate for hardware limitations to enhance the listening experience without modifying the device?
-        Existing EQ-based approaches attempt this, but they rely on frequency response curves (FRCs) measured under ideal conditions, which fail to capture real-world distortions such as harmonic and intermodulation effects.
-        To address this, we propose Cheap2Chic, a two-stage, speaker-aware framework that improves music playback quality on low-end earphones using deep learning.
-        In stage one, Cheap2Chic trains a speaker characterization model to capture the playback properties of the target earphone.
-        In stage two, it introduces a digital audio enhancement model, prepended before the frozen speaker characterization model, that learns to adapt the input audio to compensate for hardware-induced distortions.
-        To reduce the data collection burden required for accurate speaker characterization, Cheap2Chic also incorporates a data synthesis module.
-        We built a prototype and collected a dataset to evaluate Cheap2Chic under diverse real-world conditions.
-        Results show that Cheap2Chic significantly improves perceived music quality both objectively and subjectively, while remaining efficient on mobile devices.
-      </p>
-    </div>
+      <!-- Replace the Abstract block with this section -->
+      <div class="mt-4">
+        <h5>Sample Demonstration Overview</h5>
+        <p>
+          This page showcases our <em>Cheap2Chic</em> system using one representative
+          <strong>device pair</strong> and <strong>five music genres</strong>.
+          The low-end earphone is <strong>IE-L1: Fransun E20</strong>, and the target
+          high-end earphone is <strong>IE-H2: Sennheiser IE 300</strong>.
+        </p>
+      
+        <p class="mb-1">Because most visitors do not have these exact devices, all audio here is
+          <strong>recorded after playback through the corresponding earphones</strong>.
+          Concretely, each table column means:
+        </p>
+        <ul class="mb-3">
+          <li><strong>Low-End</strong>: original track played through the low-end earphone, then recorded.</li>
+          <li><strong>Cheap2Chic</strong>: audio enhanced by our system, played through the same low-end earphone, then recorded.</li>
+          <li><strong>High-End</strong>: original track played through the high-end earphone, then recorded.</li>
+        </ul>
+      
+        <p class="mb-0">
+          This setup lets you perceive the qualitative improvements delivered by Cheap2Chic under realistic playback conditions.
+        </p>
+      </div>
+
 
     <!-- =================== AUDIO EXAMPLES: PAIR 1 =================== -->
     <div class="container shadow p-5 mb-5 bg-white rounded">
